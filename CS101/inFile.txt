@@ -1,0 +1,7 @@
+Paul Neal  5 functions  conditions  if_statements parameters structs
+Fred Fresh  4 parameters switch_statements for_loops debugging
+Kathy Smith 5 conditions for_loops parameters structs expressions
+George Jones 4 switch_statements expressions conditions functions
+Ted Jeffers 6 casting coercion expressions if_statements for_loops switch_statements
+Larry Lee 6 casting conditions debugging structs parameters switch_statements
+Paula Reedy 3 strings input_output for_loops
