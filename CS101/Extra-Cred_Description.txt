@@ -1,0 +1,41 @@
+EXTRA Credit
+You have been hired by Dr. Keeling to be his Teaching Assistant and he has asked you to write a program that creates a subsystem of his online system that assists students in getting in contact with tutors for certain course topics. The new subsystem must allow students to enter a course topic (like variables, loops or arrays) and the program will display all the ACM members who have agreed to tutor students in the topic.
+The input file named "infile.txt" should contain the names of the tutors, the number of topics they want to tutor and the list of topics that they want to tutor.
+
+
+Paul Neal  5 functions  conditions  if_statements parameters structs
+Fred Fresh  4 parameters switch_statements for_loops debugging
+Kathy Smith 5 conditions for_loops parameters structs expressions
+George Jones 4 switch_statements expressions conditions functions
+Ted Jeffers 6 casting coercion expressions if_statements for_loops switch_statements
+Larry Lee 6 casting conditions debugging structs parameters switch_statements
+Paula Reedy 3 strings input_output for_loops
+
+
+
+Use my structure chart above and the following prototypes. 
+
+void get_tutor_data (ifstream&, string[], int[][13]);
+string lookup_tutors(string[], int [][13], string);
+void display_tutor_list(string);
+
+
+
+1) In the main function, declare a 1-dimensional array, Tutor_name_array, to hold the full name of each of the 7 tutors and a 2-dimensional array, Tutoring_array, to hold the information about the particular topics each tutor wants to tutor. This 2-dimensional array should be arranged like the following image:
+ 
+
+2) In the main function, use a nested loop to set the values of this 2-dimensional array to all zeroes (0) before calling Get_tutor_data with this array, another 1-dimensional string array to store tutor names and the input file as parameters.
+
+
+3) In the Get_tutor_data function, use the outer loop of a nested for loop to read the tutor names (concatenate the first and last names) a store these strings in the tutor_name_array [col]. Also, read the number of topics to control the inner loop. The inner loop should read each topic on the input line. Also, test these strings and set the corresponding cells of the 2-dimensional array to 1 to indicate the this tutor (row) can tutor in this topic (col).
+
+
+4) In the lookup_tutors function, using the topic (string) sent to it as a parameter from the main function, use a for loop to test the topic to set the col variable. This will be a series of if-then-else statements. Then, within another for loop, use the col variable to test each cell (row) in the corresponding column of the 2-dimensional tutor_array to see if it is equal to 1. If it is equal to 1, then concatenate the tutor name to a string (list_of_tutors) that was declared locally and initialized to the null string "". When this loop ends, the list_of_tutors string should have a list of tutor names containing all tutors who want tutor in the topic. Finally, return the list_of_tutors to main.
+
+
+5) In the main function, set up a do-while statement to prompt the user to enter the topic (string) they wish to be tutored in (see output screen below). Get the string from the user and, then, call the lookup_tutors function. When this value returning function returns the list of eligible tutor names, call the display_list_tutors function to display these names in the console window. Next, prompt the user to see if they want to enter another topic. If not, end the program. Otherwise, loop back to the beginning and prompt for another topic.
+
+
+Your program output should look like the following:
+ 
+
