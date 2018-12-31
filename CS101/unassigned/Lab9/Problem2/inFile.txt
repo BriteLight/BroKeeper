@@ -1,0 +1,5 @@
+Pine            0.89
+Fir             1.09
+Cedar           2.26
+Maple           4.50
+Oak             3.10

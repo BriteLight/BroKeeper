@@ -1,0 +1,7 @@
+Takoma_store 2.7 71.3 14.7 23.9 51.2
+Bethesda_store 12.7 8.9 17.8 7.9 18.3
+Bainbridge_store 43.2 34.1 12.4 5.3 7.2
+Beaverton_store 6.3 5.3 11.3 14.4 32.1
+Portland_store 8.3 11.4 15.2 28.2 34.4
+Hilsboro_store 2.7 3.4 5.7 11.3 12.4
+Springfield_store 1.4 5.3 7.3 21.3 63.1
