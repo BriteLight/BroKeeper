@@ -1,0 +1,7 @@
+
+>>> class matterOfac(object):
+...   def __init__(self):
+...     self.n = "1"
+...   def testit(self):
+...     print(self.n)
+...
