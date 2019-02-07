@@ -1,7 +1,58 @@
+#!/usr/bin/env python3  
+"""
+Some current problems with this code, regarding output.
+Bandaji, totallygeek, on reddit 2018jan4
+"""
+import sys
 
->>> class matterOfac(object):
-...   def __init__(self):
-...     self.n = "1"
-...   def testit(self):
-...     print(self.n)
-...
+def all_digits(chars):
+    return all([c in '0123456789' for c in chars])  
+
+def ask_for_number(msg):
+    number = False
+    while not number:
+        response = input('{} '.format(msg))
+        try:
+            number = int(response)
+        except ValueError as error:
+            pass
+    return number  
+
+def error_and_exit():
+    raise SystemExit('Error. Exiting.')  
+
+def factorialize(numerator, denominator):
+    total = 1     
+    print('{}!\n{}!'.format(numerator, denominator))     
+    floor = min((numerator if numerator != 0 else 1, denominator if denominator != 0 else 1))
+    ceiling = max((numerator if numerator != 0 else 1, denominator if denominator != 0 else 1))
+    for n in reversed(range(floor + 1, ceiling + 1)):
+        total *= n
+        print(total)
+        print('For {}! / {}!'.format(numerator, denominator))  
+        
+def factorial_job():
+    argc = len(sys.argv)
+    if argc == 3:
+        numerator = sys.argv[1]
+        denominator = sys.argv[2]
+        if all_digits(numerator) and all_digits(denominator):
+            numerator = int(numerator)
+            denominator = int(denominator)
+        else:
+            error_and_exit()
+    elif argc == 2:
+        numerator = sys.argv[1]
+        if all_digits(numerator):
+            numerator = int(numerator)
+            denominator = 0
+        else:
+            numerator = ask_for_number('enter numerator n:')
+            denominator = ask_for_number('enter denominator m (0 for 0!):')
+            factorialize(numerator, denominator)  
+                
+def main():
+    factorial_job()
+    if __name__ == '__main__':
+        main()
+
